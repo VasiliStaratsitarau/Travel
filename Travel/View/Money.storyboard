@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Spent Money View Controller-->
+        <scene sceneID="PFQ-BC-Y52">
+            <objects>
+                <viewController storyboardIdentifier="SpentMoneyViewController" id="7o3-28-ec3" customClass="SpentMoneyViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fUI-sj-F7n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите потраченную сумму" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au2-9L-tYd">
+                                <rect key="frame" x="24" y="54" width="366" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="IEi-Wc-DiI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5BX-p8-MBr">
+                                <rect key="frame" x="24" y="108" width="366" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KtQ-Rj-Jyp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AIR-Ko-jML">
+                                <rect key="frame" x="24" y="178" width="366" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yzD-uu-cOv"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="$"/>
+                                    <segment title="€"/>
+                                    <segment title="₽"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wu-KI-qpL">
+                                <rect key="frame" x="24" y="792" width="366" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aLa-Vb-guW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Готово">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="okAction:" destination="7o3-28-ec3" eventType="touchUpInside" id="fJn-NG-eha"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2uq-a2-21u" firstAttribute="trailing" secondItem="AIR-Ko-jML" secondAttribute="trailing" constant="24" id="2ZY-q1-Gli"/>
+                            <constraint firstItem="AIR-Ko-jML" firstAttribute="leading" secondItem="2uq-a2-21u" secondAttribute="leading" constant="24" id="KIS-CJ-egN"/>
+                            <constraint firstItem="au2-9L-tYd" firstAttribute="leading" secondItem="2uq-a2-21u" secondAttribute="leading" constant="24" id="OIh-9P-f8o"/>
+                            <constraint firstItem="2uq-a2-21u" firstAttribute="trailing" secondItem="2wu-KI-qpL" secondAttribute="trailing" constant="24" id="Po2-WZ-Px6"/>
+                            <constraint firstItem="au2-9L-tYd" firstAttribute="top" secondItem="2uq-a2-21u" secondAttribute="top" constant="10" id="UJg-zg-dKU"/>
+                            <constraint firstItem="5BX-p8-MBr" firstAttribute="leading" secondItem="2uq-a2-21u" secondAttribute="leading" constant="24" id="YyM-wQ-nej"/>
+                            <constraint firstItem="AIR-Ko-jML" firstAttribute="top" secondItem="5BX-p8-MBr" secondAttribute="bottom" constant="20" id="a4M-E9-h9f"/>
+                            <constraint firstItem="2wu-KI-qpL" firstAttribute="leading" secondItem="2uq-a2-21u" secondAttribute="leading" constant="24" id="eUG-At-4bl"/>
+                            <constraint firstItem="5BX-p8-MBr" firstAttribute="top" secondItem="au2-9L-tYd" secondAttribute="bottom" constant="8" id="fKN-sc-ahX"/>
+                            <constraint firstItem="2uq-a2-21u" firstAttribute="trailing" secondItem="5BX-p8-MBr" secondAttribute="trailing" constant="24" id="hl9-pC-Qe0"/>
+                            <constraint firstItem="2uq-a2-21u" firstAttribute="trailing" secondItem="au2-9L-tYd" secondAttribute="trailing" constant="24" id="lNo-Xf-tiv"/>
+                            <constraint firstItem="2uq-a2-21u" firstAttribute="bottom" secondItem="2wu-KI-qpL" secondAttribute="bottom" constant="20" id="t1E-U1-pPh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2uq-a2-21u"/>
+                    </view>
+                    <connections>
+                        <outlet property="money" destination="AIR-Ko-jML" id="c6x-l3-eRc"/>
+                        <outlet property="ok" destination="2wu-KI-qpL" id="rFV-f5-64R"/>
+                        <outlet property="totalMoney" destination="5BX-p8-MBr" id="GFI-FN-KP6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5L7-4k-abN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="74"/>
+        </scene>
+    </scenes>
+</document>
